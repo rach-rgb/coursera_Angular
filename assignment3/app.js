@@ -12,11 +12,19 @@ function FoundItems(){
     templateUrl: 'foundItems.html',
     scope: {
       found: '<',
+      onRemove: '&'
     },
+    controller: FoundItemsCtrl,
+    bindToController: true,
+    controllerAs: 'dirCtrl',
   };
 
   return ddo;
 };
+
+function FoundItemsCtrl(){
+
+}
 
 // controller
 NarrowItDownController.$inject = ["MenuSearchService"];
@@ -31,7 +39,8 @@ function NarrowItDownController(MenuSearchService) {
   };
 
   ctrl.removeItem = function(itemIndex){
-    ctrl.found.splice(itemIndex);
+    console.log(itemIndex);
+    ctrl.found.splice(itemIndex, 1);
   }
 
 };
