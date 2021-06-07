@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+		<title> Assignment 4 </title>
+	</head>
+	<body>
+		<ui-view></ui-view>
+
+		<!-- Libraries -->
+    	<script src="lib/angular.min.js"></script>
+    	<script src="lib/angular-ui-router.min.js"></script>
+
+		<!-- Modules -->
+		<script src="src/menuApp/menuApp.module.js"></script>
+		<script src="src/data/data.module.js"></script>
+
+		<!-- Routes -->
+		<script src="src/route.js"></script>
+
+		<!-- MenuApp artifacts -->
+		<script src="src/menuApp/categories.component.js"></script>
+		<script src="src/menuApp/categories.controller.js"></script>
+		<script src="src/menuApp/items.component.js"></script>
+		<script src="src/menuApp/items.controller.js"></script>
+
+		<!-- Data artifacts -->
+		<script src="src/data/menudata.service.js"></script>
+
+	</body>
+</html>
+</DOCTYPE>

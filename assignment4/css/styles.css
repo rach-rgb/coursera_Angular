@@ -1,0 +1,17 @@
+body {
+	font-size: 16px;
+	color: black;
+	font-family: 'Mate SC', serif;
+}
+
+/** Homepage **/
+.navbar {
+	height: 70px;
+	background-color: #f6b319;
+	border-radius: 0;
+	border: 0;
+}
+
+.navbar h1 {
+	text-align: center;
+}
