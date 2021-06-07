@@ -7,11 +7,43 @@ body {
 /** Homepage **/
 .navbar {
 	height: 70px;
-	background-color: #f6b319;
+	background-color: #35B4FA;
 	border-radius: 0;
 	border: 0;
 }
 
-.navbar h1 {
+.navbar .title {
+	text-align: center;
+}
+
+.content {
+	margin: 20px;
+}
+
+.main-link{
+	font-size: 1.5em;
+	color: #2F71DE;
+}
+
+.small-link {
+	padding: 5px;
+	font-size: 0.8em;
+	color: #2F71DE;
+}
+
+items-component ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+items-component p:nth-child(1) {
+	font-size: 1.3em;
+}
+
+items-component span {
+	border-radius: 50%;
+	background-color: #2F71DE;
+	margin-right: 5px;
+	font-size: 20px;
 	text-align: center;
 }

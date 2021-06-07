@@ -1,11 +1,13 @@
 <nav class="navbar navbar-default"> <div class="container-fluid">
-	<a ui-sref="home"> Home </a>
-	<a ui-sref="categories"> Category </a>
-	<h2 class=title> This Category </h2>
+	<a ui-sref="home" class="navbar-left small-link"> HOME </a>
+	<a ui-sref="categories" class="navbar-left small-link"> CATEGORY </a>
+	<h2 class=title> {{itemCtrl.category_name}} </h2>
 </div> </nav>
 
-<section>
-<p> {{itemCtrl.category_short}} {{itemCtrl.category_name}} </p>
-<p> {{itemCtrl.category_instruction}} </p>
+<section class="content">
+	<div class="panel panel-default" ng-if="itemCtrl.hasDescription();"> <div class="panel-body"> 
+	{{itemCtrl.category_instruction}}
+	</div> </div>
+
 <items-component list=itemCtrl.list></items-component>
 </section>
