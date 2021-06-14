@@ -4,17 +4,22 @@
 angular.module('public')
 .controller('SignUpController', SignUpController);
 
-function SignUpController() {
+SignUpController.$inject = ['MenuService', 'InfoService'];
+function SignUpController(MenuService, InfoService) {
   var $ctrl = this;
+  $ctrl.error = false;
+  $ctrl.save = false;
 
   $ctrl.submit = function(){
-  	console.log($ctrl.user.firstName);
-  	console.log($ctrl.user.lastName);
-  	console.log($ctrl.user.email);
-  	console.log($ctrl.user.phone);
-  	console.log($ctrl.user.favMenu);
+	MenuService.getMenu($ctrl.user.favMenu)
+	.then(function(response){
+		$ctrl.error = false;
+		$ctrl.save = true;
+		InfoService.saveInfo($ctrl.user);
+	}, function(error){
+		$ctrl.error = true;
+	});
   }
 }
-
 
 })();

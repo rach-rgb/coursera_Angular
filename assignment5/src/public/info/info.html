@@ -1,0 +1,16 @@
+<div class="container info-container" ng-controller="InfoController as infoCtrl">
+  <h2 id="info-title" class="text-center">User Information</h2>
+  <div ng-if="!infoCtrl.user"> Not Signed Up Yet. <a ui-sref="public.signup">Sign Up Now!</a> </div>
+  <section ng-if="infoCtrl.user">
+    <div>
+      <div class="col-md-6 col-sm-6 col-xs-12"> 
+          First Name: {{infoCtrl.user.firstName}} <br>
+          Last Name: {{infoCtrl.user.lastName}} <br>
+          Email: {{infoCtrl.user.email}} <br>
+          Phone: {{infoCtrl.user.phone}} 
+      </div>
+      <img class="img-responsive col-md-6 col-sm-6 col-xs-12" 
+      ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.user.favMenu}}.jpg" alt="{{infoCtrl.name}}">
+    </div>
+  </section>
+</div>

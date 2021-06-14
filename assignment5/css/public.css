@@ -124,16 +124,31 @@ h3.menu-item-title {
 }
 
 .signup-container div {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .signup-container .btn {
-  
+  background-color: #3F0C1F;
+  border: 0px;
 }
 
+.signup-container .btn:hover {
+  background-color: #F6B319;
+  border: 0px;
+}
 /* End Sign Up Page */
+
+/* Info Page */
+.info-title {
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+/* End Info Page */
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {

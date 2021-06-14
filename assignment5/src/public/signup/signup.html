@@ -1,27 +1,29 @@
 <div class="container signup-container" ng-controller="SignUpController as signUpCtrl">
   <h2 id="signup-title" class="text-center">Sign Up</h2>
   <form name="signupForm" novalidate>
-    <div> First Name 
-      <input type="text" name="firstName" class="form-control"
+    <div class="col-md-6 col-sm-6 col-xs-12"> First Name 
+      <input type="text"  class="form-control"
       ng-model="signUpCtrl.user.firstName" required minlength="1">
     </div>
-    <div> Last Name 
-      <input type="text" name="lastName" class="form-control"
+    <div class="col-md-6 col-sm-6 col-xs-12"> Last Name 
+      <input type="text" class="form-control"
       ng-model="signUpCtrl.user.lastName" required minlength="1"> 
     </div>
-    <div> Email 
-      <input type="email" name="email" class="form-control" 
+    <div class="col-md-6 col-sm-6 col-xs-12"> Email 
+      <input type="email" class="form-control" 
       ng-model="signUpCtrl.user.email" required> 
     </div>
-    <div> Phone 
-      <input type="text" name="phone" class="form-control" placeholder="###-####-####" 
+    <div class="col-md-6 col-sm-6 col-xs-12"> Phone 
+      <input type="text" class="form-control" placeholder="###-####-####" 
       ng-model="signUpCtrl.user.phone" required pattern="(\d{3})-(\d{4})-(\d{4})"> 
     </div>
-    <div> Favorite Menu 
-      <input type="text" name="favMenu" class="form-control"
+    <div class="col-md-12 col-sm-12 col-xs-12"> Favorite Menu 
+      <input type="text" class="form-control"
       ng-model="signUpCtrl.user.favMenu" required>
       <div class="form-text"> Enter you favorite menu for further recommendation </div>
+      <div class="form-text" ng-if="signUpCtrl.error"> No such menu exists </div>
     </div>
     <button class="btn btn-primary pull-right" ng-disabled="signupForm.$invalid" ng-click="signUpCtrl.submit()"> Submit </button>
   </form>
+  <div class="form-text" ng-if="signUpCtrl.save && !signUpCtrl.error"> Your Information has been saved </div>
 </div>
